@@ -39,29 +39,32 @@ public class MonetaryValue {
     private final int decimalValue;
 
     /**
-     * Return a string in arabic describing the monetary value.</br>
+     * Return a string in arabic describing the monetary value.<br/>
      * ex: مئتان و أربعة و ثلاثون جنيهاً و خمسة و أربعون قرشاً لا غير
      * @param value monetary value
      * @param currency supported currencies are AED, SYP, SAR, TND, XAU, JOD, BHD, EGP
+     * @return a string in arabic describing the monetary value.
      * */
     public static String inArabic(BigDecimal value, Currency currency) {
         return new MonetaryValue(value, currency).asArabicSentence();
     }
 
     /**
-     * Return a string in english describing the monetary value.</br>
+     * Return a string in english describing the monetary value.<br/>
      * ex:  Two Hundred Thirty Four Egyptian Pounds and Forty Five Piasters only.
      * @param value monetary value
      * @param currency supported currencies are AED, SYP, SAR, TND, XAU, JOD, BHD, EGP
+     * @return a string in english describing the monetary value.
      * */
     public static String inEnglish(BigDecimal value, Currency currency) {
         return new MonetaryValue(value, currency).asEnglishSentence();
     }
 
     /**
-     * Return a new monetary value instance.</br>
+     * Return a new monetary value instance.<br/>
      * @param value monetary value
      * @param currency supported currencies are AED, SYP, SAR, TND, XAU, JOD, BHD, EGP
+     * @return a new monetary value instance
      * */
     public static MonetaryValue of(BigDecimal value, Currency currency) {
         return new MonetaryValue(value, currency);
@@ -137,8 +140,9 @@ public class MonetaryValue {
     }
 
     /**
-     * Return a string in english describing the monetary value.</br>
+     * Return a string in english describing the monetary value.<br/>
      * ex:  Two Hundred Thirty Four Egyptian Pounds and Forty Five Piasters only.
+     * @return a string in english describing the monetary value.
      * */
     public String asEnglishSentence() {
         BigDecimal tempNumber = number;
@@ -243,8 +247,9 @@ public class MonetaryValue {
     }
 
     /**
-     * Return a string in arabic describing the monetary value.</br>
+     * Return a string in arabic describing the monetary value.<br/>
      * ex: مئتان و أربعة و ثلاثون جنيهاً و خمسة و أربعون قرشاً لا غير
+     * @return a string in arabic describing the monetary value.
      * */
     public String asArabicSentence() {
         BigDecimal tempNumber = number;
@@ -661,6 +666,9 @@ public class MonetaryValue {
         }
     }
 
+    /**
+     * Supported currencies for monetary values.
+     * */
     public enum Currency {
         AED,
         SYP,

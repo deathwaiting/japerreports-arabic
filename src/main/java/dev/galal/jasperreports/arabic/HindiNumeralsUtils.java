@@ -4,12 +4,17 @@ import net.sf.jasperreports.functions.annotations.Function;
 import net.sf.jasperreports.functions.annotations.FunctionParameter;
 import net.sf.jasperreports.functions.annotations.FunctionParameters;
 
+/**
+ * Utilities for handling hindi numerals (١, ٢, ٣ , ...), that are used in arabic language.
+ * */
 public class HindiNumeralsUtils {
 
     private HindiNumeralsUtils() {}
 
     /**
      * Converts are Arabic numerals (1,2,3 ..) in the string to Hindi numerals (١, ٢, ٣ , ...)
+     * @param str the string to convert
+     * @return new string after replacing the arabic numerals
      * */
     @Function("TO_HINDU_NUMERALS")
     @FunctionParameters({
