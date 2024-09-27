@@ -8,6 +8,9 @@ public class HindiNumeralsUtils {
 
     private HindiNumeralsUtils() {}
 
+    /**
+     * Converts are Arabic numerals (1,2,3 ..) in the string to Hindi numerals (١, ٢, ٣ , ...)
+     * */
     @Function("TO_HINDU_NUMERALS")
     @FunctionParameters({
             @FunctionParameter("string"),
