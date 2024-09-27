@@ -26,6 +26,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+        cache: 'maven'
         server-id: maven-central-release
         server-username: MVN_CENTRAL_USERNAME
         server-password: MVN_CENTRAL_PASSWORD
