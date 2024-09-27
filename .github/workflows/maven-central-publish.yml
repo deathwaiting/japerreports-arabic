@@ -38,5 +38,5 @@ jobs:
       run: |
           mvn -Dgpg.keyname=${{ secrets.GPG_KEY_NAME }} -Dgpg.passphrase=${{ secrets.MAVEN_SIGNING_KEY_PASSPHRASE }} deploy            
       env:
-          MVN_CENTRAL_USERNAME: ${{ vars.MVN_CENTRAL_USERNAME }}
+          MVN_CENTRAL_USERNAME: ${{ secrets.MVN_CENTRAL_USERNAME }}
           MVN_CENTRAL_PASSWORD: ${{ secrets.MVN_CENTRAL_PASSWORD }}
