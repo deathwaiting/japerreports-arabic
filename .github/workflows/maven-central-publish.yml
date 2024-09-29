@@ -69,4 +69,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         files: |
-          target/jaserreports-arabic-${{steps.tag.outputs.tag}}.jar
+          target/jasperreports-arabic-${{steps.tag.outputs.tag}}.jar

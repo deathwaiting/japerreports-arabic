@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.deathwaiting</groupId>
-    <artifactId>jaserreports-arabic</artifactId>
+    <artifactId>jasperreports-arabic</artifactId>
     <version>${revision}</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
