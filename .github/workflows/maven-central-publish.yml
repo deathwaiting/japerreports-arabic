@@ -19,6 +19,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Get tag
+      if: startsWith(github.ref, 'refs/tags/')
+      id: tag
+      uses: dawidd6/action-get-tag@v1
+      with:
+        # Optionally strip `v` prefix
+        strip_v: true
+    - name: Use tag
+      if: startsWith(github.ref, 'refs/tags/')
+      run: echo ${{steps.tag.outputs.tag}}
     - name: Import GPG signing key  
       uses: crazy-max/ghaction-import-gpg@v5
       with:
@@ -48,3 +58,15 @@ jobs:
         MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_SIGNING_KEY_PASSPHRASE }}
         MVN_CENTRAL_USERNAME: ${{ secrets.MAVEN_USERNAME }}
         MVN_CENTRAL_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
+        REVISION: ${{steps.tag.outputs.tag}}
+
+    # This works only if the commit is tagged, but to make this work properly i need first to get the tag and pass it as
+    # the package version for maven, which will affect the jar file name in this step as well.
+    - name: Create a Release on github
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        files: |
+          target/jaserreports-arabic-${{steps.tag.outputs.tag}}.jar

@@ -1,12 +1,12 @@
-package dev.galal.jasperreports.arabic;
+package io.github.deathwaiting.jasperreports.arabic;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Locale;
 
-import static dev.galal.jasperreports.arabic.HindiNumeralsUtils.toHindiNumerals;
 import static java.time.ZoneOffset.UTC;
 import static java.util.TimeZone.getTimeZone;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,6 +22,6 @@ class TestFormatFactory {
 
     @Test
     void testHindiNumeralsUtils() {
-        assertEquals("bla ١٢٣", toHindiNumerals("bla 123"));
+        Assertions.assertEquals("bla ١٢٣", HindiNumeralsUtils.toHindiNumerals("bla 123"));
     }
 }

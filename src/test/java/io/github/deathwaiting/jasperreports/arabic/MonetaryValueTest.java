@@ -1,10 +1,10 @@
-package dev.galal.jasperreports.arabic;
+package io.github.deathwaiting.jasperreports.arabic;
 
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-import static dev.galal.jasperreports.arabic.MonetaryValue.Currency.EGP;
+import static io.github.deathwaiting.jasperreports.arabic.MonetaryValue.Currency.EGP;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MonetaryValueTest {

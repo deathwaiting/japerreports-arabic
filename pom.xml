@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.galal</groupId>
+    <groupId>io.github.deathwaiting</groupId>
     <artifactId>jaserreports-arabic</artifactId>
-    <version>1.0</version>
+    <version>${revision}</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A collection of utilities to facilitate creating reports in Arabic using Jasper reports</description>
@@ -39,6 +39,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.jasperreports>6.20.5</version.jasperreports>
+        <revision>1.0</revision>
     </properties>
 
     <dependencies>

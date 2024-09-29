@@ -1,4 +1,4 @@
-package dev.galal.jasperreports.arabic;
+package io.github.deathwaiting.jasperreports.arabic;
 
 import net.sf.jasperreports.functions.annotations.Function;
 import net.sf.jasperreports.functions.annotations.FunctionParameter;

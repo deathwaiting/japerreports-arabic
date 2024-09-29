@@ -1,6 +1,17 @@
 # jasperreports-arabic
 
 A set of utilities for creating Arabic reports using [jasperreports](https://github.com/TIBCOSoftware/jasperreports).
+## Usage 
+
+Add to you maven project 
+
+```xml
+<dependency>
+    <groupId>io.github.deathwaiting</groupId>
+    <artifactId>jaserreports-arabic</artifactId>
+    <version>1.0</version>
+</dependency>
+```
 
 ## Utilities
 

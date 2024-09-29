@@ -1,4 +1,4 @@
-package dev.galal.jasperreports.arabic;
+package io.github.deathwaiting.jasperreports.arabic;
 
 import net.sf.jasperreports.engine.util.DefaultFormatFactory;
 

@@ -1,4 +1,4 @@
-package dev.galal.jasperreports.arabic;
+package io.github.deathwaiting.jasperreports.arabic;
 
 import java.math.BigDecimal;
 import java.util.Objects;
