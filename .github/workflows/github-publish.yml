@@ -24,8 +24,10 @@ jobs:
           ./mvnw clean package -DskipTests
           ls -la target/*.jar
 
-      - name: Upload JAR as artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload Jar in a Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: jaserreports-arabic-1.0.jar
-          path: target/jaserreports-arabic-1.0.jar
+          files: |
+            target/jaserreports-arabic-1.0.jar
