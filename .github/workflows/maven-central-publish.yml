@@ -37,8 +37,8 @@ jobs:
         gpg-passphrase: ${{ secrets.MAVEN_SIGNING_KEY_PASSPHRASE }}
       env:
         MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_SIGNING_KEY_PASSPHRASE }}
-        MVN_CENTRAL_USERNAME: ${{ secrets.MVN_CENTRAL_USERNAME }}
-        MVN_CENTRAL_PASSWORD: ${{ secrets.MVN_CENTRAL_PASSWORD }}
+        MVN_CENTRAL_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+        MVN_CENTRAL_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
 
     - name: Release to Maven repo
       run: |
@@ -46,5 +46,5 @@ jobs:
           ./mvnw deploy
       env:
         MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_SIGNING_KEY_PASSPHRASE }}
-        MVN_CENTRAL_USERNAME: ${{ secrets.MVN_CENTRAL_USERNAME }}
-        MVN_CENTRAL_PASSWORD: ${{ secrets.MVN_CENTRAL_PASSWORD }}
+        MVN_CENTRAL_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+        MVN_CENTRAL_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
