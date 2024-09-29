@@ -39,7 +39,7 @@ public class MonetaryValue {
     private final int decimalValue;
 
     /**
-     * Return a string in arabic describing the monetary value.<br></br>
+     * Return a string in arabic describing the monetary value.
      * ex: مئتان و أربعة و ثلاثون جنيهاً و خمسة و أربعون قرشاً لا غير
      * @param value monetary value
      * @param currency supported currencies are AED, SYP, SAR, TND, XAU, JOD, BHD, EGP
@@ -50,7 +50,7 @@ public class MonetaryValue {
     }
 
     /**
-     * Return a string in arabic describing the monetary value.<br></br>
+     * Return a string in arabic describing the monetary value.
      * ex: مئتان و أربعة و ثلاثون جنيهاً و خمسة و أربعون قرشاً لا غير
      * @param value monetary value
      * @param currency supported currencies are AED, SYP, SAR, TND, XAU, JOD, BHD, EGP
@@ -61,7 +61,7 @@ public class MonetaryValue {
     }
 
     /**
-     * Return a string in english describing the monetary value.<br></br>
+     * Return a string in english describing the monetary value.
      * ex:  Two Hundred Thirty Four Egyptian Pounds and Forty Five Piasters only.
      * @param value monetary value
      * @param currency supported currencies are AED, SYP, SAR, TND, XAU, JOD, BHD, EGP
@@ -72,7 +72,7 @@ public class MonetaryValue {
     }
 
     /**
-     * Return a string in english describing the monetary value.<br></br>
+     * Return a string in english describing the monetary value.
      * ex:  Two Hundred Thirty Four Egyptian Pounds and Forty Five Piasters only.
      * @param value monetary value
      * @param currency supported currencies are AED, SYP, SAR, TND, XAU, JOD, BHD, EGP
@@ -83,7 +83,7 @@ public class MonetaryValue {
     }
 
     /**
-     * Return a new monetary value instance.<br></br>
+     * Return a new monetary value instance.
      * @param value monetary value
      * @param currency supported currencies are AED, SYP, SAR, TND, XAU, JOD, BHD, EGP
      * @return a new monetary value instance
@@ -162,7 +162,7 @@ public class MonetaryValue {
     }
 
     /**
-     * Return a string in english describing the monetary value.<br></br>
+     * Return a string in english describing the monetary value.
      * ex:  Two Hundred Thirty Four Egyptian Pounds and Forty Five Piasters only.
      * @return a string in english describing the monetary value.
      * */
@@ -269,7 +269,7 @@ public class MonetaryValue {
     }
 
     /**
-     * Return a string in arabic describing the monetary value.<br></br>
+     * Return a string in arabic describing the monetary value.
      * ex: مئتان و أربعة و ثلاثون جنيهاً و خمسة و أربعون قرشاً لا غير
      * @return a string in arabic describing the monetary value.
      * */
