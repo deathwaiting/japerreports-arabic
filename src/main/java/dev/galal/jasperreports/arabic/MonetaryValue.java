@@ -50,6 +50,17 @@ public class MonetaryValue {
     }
 
     /**
+     * Return a string in arabic describing the monetary value.<br/>
+     * ex: مئتان و أربعة و ثلاثون جنيهاً و خمسة و أربعون قرشاً لا غير
+     * @param value monetary value
+     * @param currency supported currencies are AED, SYP, SAR, TND, XAU, JOD, BHD, EGP
+     * @return a string in arabic describing the monetary value.
+     * */
+    public static String inArabic(String value, Currency currency) {
+        return new MonetaryValue(new BigDecimal(value), currency).asArabicSentence();
+    }
+
+    /**
      * Return a string in english describing the monetary value.<br/>
      * ex:  Two Hundred Thirty Four Egyptian Pounds and Forty Five Piasters only.
      * @param value monetary value
@@ -58,6 +69,17 @@ public class MonetaryValue {
      * */
     public static String inEnglish(BigDecimal value, Currency currency) {
         return new MonetaryValue(value, currency).asEnglishSentence();
+    }
+
+    /**
+     * Return a string in english describing the monetary value.<br/>
+     * ex:  Two Hundred Thirty Four Egyptian Pounds and Forty Five Piasters only.
+     * @param value monetary value
+     * @param currency supported currencies are AED, SYP, SAR, TND, XAU, JOD, BHD, EGP
+     * @return a string in english describing the monetary value.
+     * */
+    public static String inEnglish(String value, Currency currency) {
+        return new MonetaryValue(new BigDecimal(value), currency).asEnglishSentence();
     }
 
     /**
